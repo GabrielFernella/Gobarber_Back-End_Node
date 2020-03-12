@@ -11,7 +11,7 @@ Template
 8 - yarn add pg pg-hstore (Dependencias postgres)
 9 - yarn sequelize migration:create --name=create-users   (criando a migration create Users)
 10 - yarn sequelize db:migrate (Para executar a migration)   ||  yarn sequelize db:migrate:undo ou undo:all para desfazer as migratins
-11 - 
+11 - yarn add bcryptjs (para gerar o hash de criptografia)
 12 - 
 13 - 
 14 - 
