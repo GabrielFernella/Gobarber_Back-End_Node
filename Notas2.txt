@@ -7,8 +7,8 @@ Template
 4 - create nodemon.json para reconhecer os imports and edit package.json em scripts
 5 - docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11 (instalar o container do docker)(o 11 descoheço)
 6 - criar a estrutura de pastas
-7 - yarn add sequelize
-8 - 
+7 - yarn add sequelize  and  yarn add sequelize-cli -D and create .sequelizerc
+8 - yarn add pg pg-hstore (Dependencias postgres)
 9 - 
 10 - 
 11 - 
