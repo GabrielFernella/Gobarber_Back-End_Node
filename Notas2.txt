@@ -12,7 +12,7 @@ Template
 9 - yarn sequelize migration:create --name=create-users   (criando a migration create Users)
 10 - yarn sequelize db:migrate (Para executar a migration)   ||  yarn sequelize db:migrate:undo ou undo:all para desfazer as migratins
 11 - yarn add bcryptjs (para gerar o hash de criptografia)
-12 - 
+12 - yarn add jsonwebtoken (Atutenticação JWT em Token) (pesquisa um texto para fazer a criptografia no MD5 online)
 13 - 
 14 - 
 15 - 
@@ -55,5 +55,10 @@ Template
                 *Quando criar um novo controller = apenas 5 métodos, precisa ser da mesma entidade
                 *Métodos = index, show, store, update, delete
     
+
+    #Autenticação JWT = Autenticação através de token 
+            *headers = cabeçalho, tipo do algoritmo
+            *Payload = Dados Adicionais
+            *Assinatura = garante que o token não foi alterado por algum usuário
 
             
