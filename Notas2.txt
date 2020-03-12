@@ -13,7 +13,7 @@ Template
 10 - yarn sequelize db:migrate (Para executar a migration)   ||  yarn sequelize db:migrate:undo ou undo:all para desfazer as migratins
 11 - yarn add bcryptjs (para gerar o hash de criptografia)
 12 - yarn add jsonwebtoken (Atutenticação JWT em Token) (pesquisa um texto para fazer a criptografia no MD5 online)
-13 - 
+13 - yarn add yup (Biblioteca de validação, shema validation)
 14 - 
 15 - 
 16 - 
