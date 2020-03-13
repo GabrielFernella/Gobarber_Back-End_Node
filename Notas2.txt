@@ -16,8 +16,8 @@ Template
 13 - yarn add yup (Biblioteca de validação, shema validation)
 
 14 - yarn add multer
-15 - 
-16 - 
+15 - yarn sequelize migration:create --name=create-files (criar a tabela de files no banco) before yarn sequelize db:migrate
+16 - yarn sequelize migration:create --name=add-avatar-field-to-users (Add campo de avatar para a tabela de usuários) before yarn sequelize db:migrate
 17 - 
 18 - 
 19 - 
