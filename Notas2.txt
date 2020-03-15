@@ -32,6 +32,12 @@ Template
 28 - 
 29 - 
 
+#Start Aplication other Interface
+    yarn 
+    yarn sequelize db:migrate (before created database gobarber in docker)
+    yarn dev
+
+
 
 ----------------------------------------------------------------------------------------------------------------------------
  Anotações:
