@@ -19,7 +19,7 @@ Template
 15 - yarn sequelize migration:create --name=create-files (criar a tabela de files no banco) before yarn sequelize db:migrate
 16 - yarn sequelize migration:create --name=add-avatar-field-to-users (Add campo de avatar para a tabela de usuários) before yarn sequelize db:migrate
 17 - yarn sequelize migration:create --name=create-appointments (criar a tabela de agendamentos) yarn sequelize db:migrate
-18 - 
+18 - yarn add date-fns@next (Biblioteca de datas)
 19 - 
 20 - 
 21 - 
