@@ -36,7 +36,6 @@ class AppointmentController {
         res.json(appointments);
     }
 
-
     //Criar Agendamento
     async store(req,res){
         const schema = Yup.object().shape({
@@ -56,6 +55,12 @@ class AppointmentController {
         });
         if(!isProvider){
             return res.status(401).json({ error: 'You can only create appointments with providers'})
+        }
+
+        //check appointement Provider is Provider*****
+        const checkProviderwithProvider =  (provider_id===req.userId)   
+        if(checkProviderwithProvider){
+            return res.status(401).json({ error: 'You can only create appointments providers with providers'})
         }
 
         //check date is invalid por estar no passado
@@ -97,6 +102,12 @@ class AppointmentController {
 
         return res.json(appointment);
     }
+
+    //Deleta agendamento
+    async delete(req, res){
+        return res.json();
+    }
+
 }
 
 export default new AppointmentController();
