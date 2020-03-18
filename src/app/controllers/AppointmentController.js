@@ -6,6 +6,8 @@ import User from '../models/User';
 import File from '../models/File';
 import * as Yup from 'yup';
 
+import Mail from '../../lib/Mail';
+
 class AppointmentController {
     //Listar Agendamento
     async index( req,res ){
@@ -94,7 +96,7 @@ class AppointmentController {
             hourStart,
             "'dia' dd 'de' MMMM', às ' H:mm'h' ",
             {locale: pt}
-        )
+        );
         await Notification.create({
             content: `Novo agendamento de ${user.name} para ${formatttedDate}`,
             user: provider_id,
@@ -105,7 +107,20 @@ class AppointmentController {
 
     //Deleta agendamento
     async delete(req, res){
-        const appointment = await Appointment.findByPk(req.params.id);
+        const appointment = await Appointment.findByPk(req.params.id, {
+            include: [//buscando o email do provider para seu envio  
+                {
+                    model: User,
+                    as: 'provider',
+                    attributes: ['name', 'email'],
+                },
+                {
+                    model: User,
+                    as: 'user',
+                    attributes: ['name', 'email'],
+                }
+            ]
+        });
 
         if(appointment.user_id != req.userId){
             return res.status(401).json({ error: "You don't have permission to cancel this appointment"})
@@ -120,6 +135,19 @@ class AppointmentController {
         //atualizando status do agendamento
         appointment.canceled_at = new Date();
         await appointment.save();
+
+        await Mail.sendMail({
+            to: `${appointment.provider.name} < ${appointment.provider.email} >`,
+            subject: 'Agendamento cancelado',
+            template: 'cancellation',
+            context: {
+                provider: appointment.provider.name,
+                user: appointment.user.name,
+                date: format(appointment.date, "'dia' dd 'de' MMMM', às ' H:mm'h' ", {locale: pt}
+                ),
+
+            }
+        });
 
         return res.json(appointment);
     }

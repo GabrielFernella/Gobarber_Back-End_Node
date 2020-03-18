@@ -22,10 +22,10 @@ Template
 18 - yarn add date-fns@next (Biblioteca de datas)
 19 - docker run --name mongobarber -p 27017:27017 -d -t mongo   (container para MongoDB)
 20 - yarn add mongoose (ORM para mongoDB)
-21 - 
-22 - 
-23 - 
-24 - 
+21 - yarn add nodemailer (biblioteca de envio de email)
+22 - mailtrap.io (site de envio de email para testes)
+23 - Para fazer templates de emails personalisados = yarn add express-handlebars nodemailer-express-handlebars
+24 - criar as estruturas de pastas e arquivos dentro de views
 25 - 
 26 - 
 27 - 
