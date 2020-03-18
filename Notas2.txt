@@ -26,8 +26,8 @@ Template
 22 - mailtrap.io (site de envio de email para testes)
 23 - Para fazer templates de emails personalisados = yarn add express-handlebars nodemailer-express-handlebars
 24 - criar as estruturas de pastas e arquivos dentro de views
-25 - 
-26 - 
+25 - Adicionando Fila em Redis = docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
+26 - yarn add bee-queue (ferramenta de fila ) (Aula Difícil 17)
 27 - 
 28 - 
 29 - 
