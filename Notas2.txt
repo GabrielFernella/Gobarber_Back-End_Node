@@ -27,7 +27,7 @@ Template
 23 - Para fazer templates de emails personalisados = yarn add express-handlebars nodemailer-express-handlebars
 24 - criar as estruturas de pastas e arquivos dentro de views
 25 - Adicionando Fila em Redis = docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
-26 - yarn add bee-queue (ferramenta de fila ) (Aula Difícil 17)
+26 - yarn add bee-queue (ferramenta de fila ) (Aula Difícil 17) yarn queue
 27 - 
 28 - 
 29 - 
@@ -36,6 +36,7 @@ Template
     yarn 
     yarn sequelize db:migrate (before created database gobarber in docker)
     yarn dev
+    yarn queue
     npm install --save retry-as-promised
 
 
