@@ -43,6 +43,12 @@ Template
     yarn queue
     npm install --save retry-as-promised
     
+Aplicações de Terceiros Usados no projeto 
+    docker (Container)(3 bancos utilizados)
+    MD5 (para fazer chave de Autenticação)
+    Mailtrip (Recebimento de Emails)
+    Sentry.io (Verificação de Erros)
+
 
 
 
