@@ -5,7 +5,7 @@ Template
 2 - Create file app.js, routes.js, server.js 
 3 - yarn add sucrase nodemon -D (sucrase = para fazer os imports das dependencias) (nodemon = para fazer a atualização automatica)
 4 - create nodemon.json para reconhecer os imports and edit package.json em scripts
-5 - docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11 (instalar o container do docker)(o 11 descoheço)
+5 - docker run --name postdata -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres:11 (instalar o container do docker)(o 11 descoheço)
 6 - criar a estrutura de pastas
 7 - yarn add sequelize  and  yarn add sequelize-cli -D and create .sequelizerc
 8 - yarn add pg pg-hstore (Dependencias postgres)
@@ -33,11 +33,13 @@ Template
 29 - 
 
 #Start Aplication other Interface
+    docker start postadata mongobarber redisbarber
     yarn 
     yarn sequelize db:migrate (before created database gobarber in docker)
     yarn dev
     yarn queue
     npm install --save retry-as-promised
+    
 
 
 
