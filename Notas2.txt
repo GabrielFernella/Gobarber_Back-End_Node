@@ -32,6 +32,8 @@ Template
 28 - yarn add @sentry/node@5.14.1  =  Crie a config e edite o app.js
 29 - yarn add express-async-errors
 30 - yarn add youch
+31 - yarn add dotenv (arquivo .env criado, porém, privado)
+32 - Editar todas as conexões com as variaveis de ambiente
 
 #Start Aplication other Interface
     docker start postadata mongobarber redisbarber
