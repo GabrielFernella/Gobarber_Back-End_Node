@@ -27,10 +27,11 @@ Template
 23 - Para fazer templates de emails personalisados = yarn add express-handlebars nodemailer-express-handlebars
 24 - criar as estruturas de pastas e arquivos dentro de views
 25 - Adicionando Fila em Redis = docker run --name redisbarber -p 6379:6379 -d -t redis:alpine
-26 - yarn add bee-queue (ferramenta de fila ) (Aula Difícil 17) yarn queue
-27 - 
-28 - 
-29 - 
+26 - yarn add bee-queue (ferramenta de fila ) (Aula Difícil 17) yarn queue (new Date().getTime()) no chrome para pegar a data para a query 
+27 - sentry.io (para tratamento e monitoramento de erros. Fazer login e baixar as infos)
+28 - yarn add @sentry/node@5.14.1  =  Crie a config e edite o app.js
+29 - yarn add express-async-errors
+30 - yarn add youch
 
 #Start Aplication other Interface
     docker start postadata mongobarber redisbarber
