@@ -1,5 +1,5 @@
 Template
- #Passos de instalação: 
+# Passos de instalação: 
 
 1 - yarn add express
 2 - Create file app.js, routes.js, server.js 
@@ -35,7 +35,7 @@ Template
 31 - yarn add dotenv (arquivo .env criado, porém, privado)
 32 - Editar todas as conexões com as variaveis de ambiente
 
-#Start Aplication other Interface
+# Start Aplication other Interface
     docker start postadata mongobarber redisbarber
     yarn 
     yarn sequelize db:migrate (before created database gobarber in docker)
@@ -56,9 +56,9 @@ Aplicações de Terceiros Usados no projeto
  Anotações:
 
     #ORM 
-        *Abstração de bamco de dados
-        *tabelas viram models
-        *apenas codigo javascript
+        * Abstração de bamco de dados
+        * tabelas viram models
+        * apenas codigo javascript
 
         @Migrations
             *Controle de versão para base de dados
